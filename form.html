@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>My Form</title>
+<script type="text/javascript">
+function notEmpty(elem, helperMsg){
+	if(elem.value.length == 0){
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<table border=1 align="center">
+<form method="post" action="insert.php">
+<tr>
+<td>Name</td>
+<td><input type="text" name="name" id="name" maxlength=20></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" name="email" id="name" maxlength=50></td>
+</tr>
+<tr>
+<td>Age</td>
+<td><input type="text" name="age" id="name" maxlength=20></td>
+</tr>
+<tr>
+<td><input type="submit" name="submit" value="Submit" onsubmit="notEmpty(document.getElementById('name'), 'Please Enter a Value')"></td>
+<td><input type="reset" name="reset" value="Clear"></td>
+</tr>
+</form>
+</table>
+</body>
+</html>
